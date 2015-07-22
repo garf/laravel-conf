@@ -21,19 +21,19 @@ to your `composer.json` file into `require` section.
 
 Then type in console
 
-``` bash
+```
 $ composer update
 ```
 
 When update completed, add to your `config/app.conf` file to `providers` section
 
-``` php
+```
 Gaaarfild\LaravelConf\LaravelConfServiceProvider::class,
 ```
 
-If you want to use Conf facade, add to same file at the `aliases` section
+If you want to use `Conf` facade, add to same file at the `aliases` section
 
-``` php
+```
 'Conf' => Gaaarfild\LaravelConf\ConfFacade::class,
 ```
 
@@ -44,7 +44,7 @@ If you want to use Conf facade, add to same file at the `aliases` section
 
 ### Get config value
 
-``` php
+```
 Conf::get('key', 'default_value');
 //You can optionally set the third parameter 'withFallback'. 
 //If no such value in JSON-file, it will try to get it from native config array. 
@@ -53,19 +53,19 @@ Conf::get('key', 'default_value');
 
 ### Save config value
 
-``` php
+```
 Conf::set('key', 'value_to_save');
 ```
 
 ### Get entire config
 
-``` php
+```
 Conf::all();
 ```
 
 ### Check config key existence
 
-``` php
+```
 Conf::has('key', true);
 //Second parameter `withFallback`. If true, it also checks for native laravel config key existence.
 ```
@@ -74,7 +74,7 @@ Conf::has('key', true);
 
 Contributions are highly appreciated.
 
-Send your pull requests to master.
+Send your pull requests to `master` branch.
 
 
 ## License
