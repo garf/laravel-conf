@@ -1,0 +1,13 @@
+{
+    "name": "gaaarfild/laravel-conf",
+    "description": "Store additional config files in JSON, write, read, fallback.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dinar Garipov",
+            "email": "garipov.dinar@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
