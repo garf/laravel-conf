@@ -45,6 +45,9 @@ If you want to use Conf facade, add to same file at the `aliases` section
 
 ``` php
 Conf::get('key', 'default_value');
+//You can optionally set the third parameter 'withFallback'. 
+//If no such value in JSON-file, it will try to get it from native config array. 
+//Else will return default value.
 ```
 
 ### Save config value
