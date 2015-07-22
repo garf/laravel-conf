@@ -62,9 +62,9 @@ class Conf
      * @param bool $withFallback
      * @return string
      */
-    public function has($key, $withFallback=false)
+    public function has($key, $withFallback=true)
     {
-        $has = $this->config->has($hey);
+        $has = $this->config->has($key);
         if($withFallback) {
             return $has;
         } else {
@@ -81,11 +81,17 @@ class Conf
      *
      * @param $key
      * @param bool $default
+     * @param bool $withFallback
      * @return string
      */
-    public function get($key, $default=null)
+    public function get($key, $default=null, $withFallback=true)
     {
-        return $this->config->get($key, Config::get($key, $default));
+        if ($withFallback) {
+            return $this->config->get($key, Config::get($key, $default));
+        } else {
+            return $this->config->get($key, $default);
+        }
+
     }
 
     /**
