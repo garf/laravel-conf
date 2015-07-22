@@ -67,7 +67,8 @@ Conf::all();
 
 ``` PHP
 Conf::has('key', true);
-//Second parameter `withFallback`. If true, it also checks for native laravel config key existence.
+//Second parameter `withFallback`. 
+//If true, it also checks for native laravel config key existence.
 ```
 
 ## Contributions
