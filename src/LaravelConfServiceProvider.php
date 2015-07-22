@@ -4,7 +4,7 @@ namespace Gaaarfild\LaravelConf;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelConfServiceProvider22 extends ServiceProvider
+class LaravelConfServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
