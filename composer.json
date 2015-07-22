@@ -10,7 +10,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+	"php": ">=5.4.0",
+        "illuminate/support": ">=4.2"
+    },
     "autoload": {
         "psr-4": {
             "Gaaarfild\\LaravelConf\\": "src/"
