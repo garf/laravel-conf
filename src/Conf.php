@@ -52,7 +52,7 @@ class Conf
     public function set($key, $value)
     {
         $this->config->put($key, $value);
-        file_put_contents($this->file, json_encode($this->config->toArray(), JSON_PRETTY_PRINT));
+        file_put_contents($this->file, $this->config->toJson(JSON_PRETTY_PRINT));
     }
 
     /**
