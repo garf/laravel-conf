@@ -5,7 +5,7 @@
 
 This package helps you to store your additional configuration in your own files.
 
-This is helpfull when you need to edit your configuration from gui. i.e. Website global settings
+This is helpfull when you need to edit your configuration by user from GUI. i.e. Website settings.
 
 Config file will be stored into `storage/app/conf.json`.
 
