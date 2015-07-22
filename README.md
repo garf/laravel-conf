@@ -4,7 +4,7 @@
 
 This package helps you to store your additional configuration in your own files.
 
-This is helpfull when you need to edit your configuration from gui.
+This is helpfull when you need to edit your configuration from gui. i.e. Website global settings
 
 Config file will be stored into `storage/app/conf.json`.
 
@@ -45,6 +45,9 @@ If you want to use Conf facade, add to same file at the `aliases` section
 
 ``` php
 Conf::get('key', 'default_value');
+//You can optionally set the third parameter 'withFallback'. 
+//If no such value in JSON-file, it will try to get it from native config array. 
+//Else will return default value.
 ```
 
 ### Save config value
