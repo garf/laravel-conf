@@ -1,6 +1,7 @@
 {
     "name": "gaaarfild/laravel-conf",
     "description": "Store additional config files in JSON, write, read, fallback.",
+    "keywords": ["laravel", "config"],
     "license": "MIT",
     "authors": [
         {
