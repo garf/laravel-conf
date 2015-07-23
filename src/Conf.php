@@ -51,7 +51,9 @@ class Conf
      */
     public function set($key, $value)
     {
-        $this->config->put($key, $value);
+        $config = $this->config->toArray();
+        array_set($config, $key, $value);
+        $this->config = collect($config);
         file_put_contents($this->file, $this->config->toJson(JSON_PRETTY_PRINT));
     }
 
@@ -64,7 +66,8 @@ class Conf
      */
     public function has($key, $withFallback=true)
     {
-        $has = $this->config->has($key);
+        $config = $this->config->toArray();
+        $has = array_get($config, $key, false) != false;
         if($withFallback) {
             return $has;
         } else {
@@ -86,12 +89,12 @@ class Conf
      */
     public function get($key, $default=null, $withFallback=true)
     {
+        $config = $this->config->toArray();
         if ($withFallback) {
-            return $this->config->get($key, Config::get($key, $default));
+            return array_get($config, $key, Config::get($key, $default));
         } else {
-            return $this->config->get($key, $default);
+            return array_get($config, $key, $default);
         }
-
     }
 
     /**
