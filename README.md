@@ -3,9 +3,11 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Laravel Version](https://img.shields.io/badge/laravel-5-orange.svg?style=flat-square)](http://laravel.com)
 
+Custom editable configs for Laravel 5.
+
 This package helps you to store your additional configuration in your own files.
 
-This is helpfull when you need to edit your configuration from gui. i.e. Website global settings
+This is helpfull when you need to edit your configuration by user from GUI. i.e. Website settings.
 
 Config file will be stored into `storage/app/conf.json`.
 
@@ -13,7 +15,7 @@ Config file will be stored into `storage/app/conf.json`.
 
 Add
 
-```
+``` JSON
 "gaaarfild/laravel-conf": "dev-master"
 ```
 
@@ -21,20 +23,26 @@ to your `composer.json` file into `require` section.
 
 Then type in console
 
-``` bash
+``` BASH
 $ composer update
 ```
 
 When update completed, add to your `config/app.conf` file to `providers` section
 
-``` php
-Gaaarfild\LaravelConf\LaravelConfServiceProvider::class,
+``` PHP
+'providers' => [
+    // ...
+    Gaaarfild\LaravelConf\LaravelConfServiceProvider::class,
+]
 ```
 
-If you want to use Conf facade, add to same file at the `aliases` section
+If you want to use `Conf` facade, add to same file at the `aliases` section
 
-``` php
-'Conf' => Gaaarfild\LaravelConf\ConfFacade::class,
+``` PHP
+'aliases' => [
+    // ...
+  'Conf' => Gaaarfild\LaravelConf\ConfFacade::class,
+]
 ```
 
 
@@ -43,7 +51,6 @@ If you want to use Conf facade, add to same file at the `aliases` section
 ## Usage
 
 ### Get config value
-
 
 ``` php
 Conf::get('key.to.retrieve', 'default_value');
@@ -59,7 +66,7 @@ Could be used 'dot' notation
 
 ### Save config value
 
-``` php
+``` PHP
 Conf::set('key', 'value_to_save');
 ```
 
@@ -67,14 +74,14 @@ Could be used 'dot' notation
 
 ### Get entire config
 
-``` php
+``` PHP
 Conf::all();
 ```
 
 ### Check config key existence
 
-``` php
-Conf::has('key', true);
+``` PHP
+Conf::has('key.to.check', true);
 ```
 
 Second parameter `withFallback`.
@@ -87,10 +94,10 @@ Could be used 'dot' notation
 
 Contributions are highly appreciated.
 
-Send your pull requests to master.
+Send your pull requests to `master` branch.
 
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/dnoegel/php-xdg-base-dir/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/gaaarfild/laravel-conf/blob/master/LICENSE) for more information.
 
