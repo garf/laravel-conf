@@ -11,7 +11,7 @@ Config file will be stored into `storage/app/conf.json`.
 
 ## Install
 
-Add 
+Add
 
 ```
 "gaaarfild/laravel-conf": "dev-master"
@@ -44,18 +44,26 @@ If you want to use Conf facade, add to same file at the `aliases` section
 
 ### Get config value
 
+
 ``` php
-Conf::get('key', 'default_value');
-//You can optionally set the third parameter 'withFallback'. 
-//If no such value in JSON-file, it will try to get it from native config array. 
-//Else will return default value.
+Conf::get('key.to.retrieve', 'default_value');
 ```
+
+You can optionally set the third parameter 'withFallback'.
+
+If no such value in JSON-file, it will try to get it from native config array.
+
+Else will return default value.
+
+Could be used 'dot' notation
 
 ### Save config value
 
 ``` php
 Conf::set('key', 'value_to_save');
 ```
+
+Could be used 'dot' notation
 
 ### Get entire config
 
@@ -67,8 +75,13 @@ Conf::all();
 
 ``` php
 Conf::has('key', true);
-//Second parameter `withFallback`. If true, it also checks for native laravel config key existence.
 ```
+
+Second parameter `withFallback`.
+
+If true, it also checks for native laravel config key existence.
+
+Could be used 'dot' notation
 
 ## Contributions
 
