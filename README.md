@@ -3,6 +3,8 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Laravel Version](https://img.shields.io/badge/laravel-5-orange.svg?style=flat-square)](http://laravel.com)
 
+Custom editable configs for Laravel 5.
+
 This package helps you to store your additional configuration in your own files.
 
 This is helpfull when you need to edit your configuration by user from GUI. i.e. Website settings.
@@ -28,13 +30,19 @@ $ composer update
 When update completed, add to your `config/app.conf` file to `providers` section
 
 ``` PHP
-Gaaarfild\LaravelConf\LaravelConfServiceProvider::class,
+'providers' => [
+    // ...
+    Gaaarfild\LaravelConf\LaravelConfServiceProvider::class,
+]
 ```
 
 If you want to use `Conf` facade, add to same file at the `aliases` section
 
 ``` PHP
-'Conf' => Gaaarfild\LaravelConf\ConfFacade::class,
+'aliases' => [
+    // ...
+  'Conf' => Gaaarfild\LaravelConf\ConfFacade::class,
+]
 ```
 
 
