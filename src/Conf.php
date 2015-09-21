@@ -2,35 +2,32 @@
 
 namespace Gaaarfild\LaravelConf;
 
-use Illuminate\Support\Traits\Macroable;
-use Session;
 use Config;
+use Illuminate\Support\Traits\Macroable;
 
 /**
- * Class Conf
- * @package Gaaarfild\LaravelConf
+ * Class Conf.
  */
 class Conf
 {
-
     use Macroable;
 
     /**
-     * In-memory config store
+     * In-memory config store.
      *
      * @var \Illuminate\Support\Collection|null
      */
     private $config = null;
 
     /**
-     * File to save config file
+     * File to save config file.
      *
      * @var null|string
      */
     private $file = null;
 
     /**
-     * Create new instance of Conf class
+     * Create new instance of Conf class.
      */
     public function __construct()
     {
@@ -44,7 +41,7 @@ class Conf
     }
 
     /**
-     * Store config value by key
+     * Store config value by key.
      *
      * @param $key
      * @param $value
@@ -58,17 +55,18 @@ class Conf
     }
 
     /**
-     * Check existence of the key
+     * Check existence of the key.
      *
      * @param $key
      * @param bool $withFallback
+     *
      * @return string
      */
-    public function has($key, $withFallback=true)
+    public function has($key, $withFallback = true)
     {
         $config = $this->config->toArray();
         $has = array_get($config, $key, false) != false;
-        if($withFallback) {
+        if ($withFallback) {
             return $has;
         } else {
             if ($has) {
@@ -80,14 +78,15 @@ class Conf
     }
 
     /**
-     * Get config value by key
+     * Get config value by key.
      *
      * @param $key
      * @param bool $default
      * @param bool $withFallback
+     *
      * @return string
      */
-    public function get($key, $default=null, $withFallback=true)
+    public function get($key, $default = null, $withFallback = true)
     {
         $config = $this->config->toArray();
         if ($withFallback) {
@@ -98,12 +97,12 @@ class Conf
     }
 
     /**
-     * Return entire config
+     * Return entire config.
+     *
      * @return string
      */
     public function all()
     {
         return $this->config->all();
     }
-
 }
