@@ -29,7 +29,7 @@ class LaravelConfServiceProvider extends ServiceProvider
 
     private function registerLaravelConf()
     {
-        $this->app->bindShared('conf', function ($app) {
+        $this->app->singleton('conf', function ($app) {
             return new Conf($app['url']);
         });
     }
