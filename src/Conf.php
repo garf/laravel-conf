@@ -6,7 +6,7 @@ use Config;
 use Illuminate\Support\Traits\Macroable;
 
 /**
- * Class Conf.
+ * Class Conf
  */
 class Conf
 {
@@ -43,8 +43,8 @@ class Conf
     /**
      * Store config value by key.
      *
-     * @param $key
-     * @param $value
+     * @param string $key
+     * @param mixed $value
      */
     public function set($key, $value)
     {
@@ -57,7 +57,7 @@ class Conf
     /**
      * Check existence of the key.
      *
-     * @param $key
+     * @param string $key
      * @param bool $withFallback
      *
      * @return string
@@ -80,7 +80,7 @@ class Conf
     /**
      * Get config value by key.
      *
-     * @param $key
+     * @param string $key
      * @param bool $default
      * @param bool $withFallback
      *
@@ -95,7 +95,21 @@ class Conf
             return array_get($config, $key, $default);
         }
     }
-
+    
+    /**
+     * Remove key from config.
+     * This method does not support fallback feature.
+     *
+     * @param string $key
+     */
+    public function forget($key)
+    {
+        $config = $this->config->toArray();
+        array_forget($config, $key);
+        $this->config = collect($config);
+        file_put_contents($this->file, $this->config->toJson(JSON_PRETTY_PRINT));
+    }
+    
     /**
      * Return entire config.
      *
