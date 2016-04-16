@@ -18,7 +18,7 @@ Config file will be stored into `storage/app/conf.json`.
 Add
 
 ``` JSON
-"gaaarfild/laravel-conf": "~1.0"
+"gaaarfild/laravel-conf": "1.*"
 ```
 
 to your `composer.json` file into `require` section.
