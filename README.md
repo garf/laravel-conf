@@ -48,8 +48,6 @@ If you want to use `Conf` facade, add to same file at the `aliases` section
 ```
 
 
-
-
 ## Usage
 
 ### Get config value
@@ -70,6 +68,14 @@ Could be used 'dot' notation
 
 ``` PHP
 Conf::set('key', 'value_to_save');
+```
+
+Could be used 'dot' notation
+
+### Removing key from config
+
+``` PHP
+Conf::forget('key');
 ```
 
 Could be used 'dot' notation
