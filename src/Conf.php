@@ -34,7 +34,7 @@ class Conf
     {
         $this->file = storage_path('app/conf.json');
         if (empty($this->config)) {
-            if (!file_exists($this->file)) {
+            if (! file_exists($this->file)) {
                 file_put_contents($this->file, json_encode([]));
             }
             $this->config = collect(json_decode(file_get_contents($this->file), true));
@@ -45,7 +45,7 @@ class Conf
      * Set the file, where to store and read from configuration.
      *
      * @param string $file
-     * 
+     *
      * @return $this
      */
     public function setFile($file)
