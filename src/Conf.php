@@ -4,6 +4,7 @@ namespace Gaaarfild\LaravelConf;
 
 use Config;
 use Illuminate\Support\Traits\Macroable;
+use Illuminate\Support\Collection;
 
 /**
  * Class Conf.
@@ -15,7 +16,7 @@ class Conf
     /**
      * In-memory config store.
      *
-     * @var \Illuminate\Support\Collection|null
+     * @var Collection|null
      */
     private $config = null;
 
@@ -38,6 +39,20 @@ class Conf
             }
             $this->config = collect(json_decode(file_get_contents($this->file), true));
         }
+    }
+
+    /**
+     * Set the file, where to store and read from configuration.
+     *
+     * @param string $file
+     * 
+     * @return $this
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+
+        return $this;
     }
 
     /**
