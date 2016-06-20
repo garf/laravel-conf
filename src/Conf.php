@@ -30,9 +30,9 @@ class Conf
     /**
      * Create new instance of Conf class.
      */
-    public function __construct()
+    public function __construct($filepath)
     {
-        $this->file = storage_path('app/conf.json');
+        $this->file = ($filepath) ? $filepath : storage_path('app/conf.json');
         if (empty($this->config)) {
             if (! file_exists($this->file)) {
                 file_put_contents($this->file, json_encode([]));
