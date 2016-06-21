@@ -32,7 +32,9 @@ class Conf
      */
     public function __construct()
     {
-        $this->file = storage_path('app/conf.json');
+        $driver = config('laravel-conf.driver', 'file');
+        $this->file = config("laravel-conf.drivers.{$driver}.path", storage_path('app/conf.json'));
+
         if (empty($this->config)) {
             if (! file_exists($this->file)) {
                 file_put_contents($this->file, json_encode([]));

@@ -29,6 +29,10 @@ class LaravelConfServiceProvider extends ServiceProvider
 
     private function registerLaravelConf()
     {
+        $this->publishes([
+            __DIR__.'/../config/laravel-conf.php' => config_path('laravel-conf.php'),
+        ], 'config');
+
         $this->app->singleton('conf', function ($app) {
             return new Conf($app['url']);
         });
