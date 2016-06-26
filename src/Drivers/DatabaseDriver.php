@@ -5,7 +5,7 @@ namespace Gaaarfild\LaravelConf\Drivers;
 use Gaaarfild\LaravelConf\Models\Conf;
 
 /**
- * Class DatabaseDriver
+ * Class DatabaseDriver.
  * @deprecated('This driver not implemented yet')
  */
 class DatabaseDriver extends AbstractDriver
@@ -68,7 +68,7 @@ class DatabaseDriver extends AbstractDriver
      */
     protected function persist()
     {
-//        if (is_null($this->modelInstance)) {
+        //        if (is_null($this->modelInstance)) {
 //            throw new
 //        }
 

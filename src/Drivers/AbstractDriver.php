@@ -5,7 +5,7 @@ namespace Gaaarfild\LaravelConf\Drivers;
 use Gaaarfild\LaravelConf\Contracts\ConfContract;
 
 /**
- * Class AbstractDriver
+ * Class AbstractDriver.
  */
 abstract class AbstractDriver implements ConfContract
 {

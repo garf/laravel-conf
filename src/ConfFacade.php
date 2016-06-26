@@ -5,7 +5,7 @@ namespace Gaaarfild\LaravelConf;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class ConfFacade
+ * Class ConfFacade.
  */
 class ConfFacade extends Facade
 {

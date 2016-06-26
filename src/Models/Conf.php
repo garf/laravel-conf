@@ -5,7 +5,7 @@ namespace Gaaarfild\LaravelConf\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Conf
+ * Class Conf.
  */
 class Conf extends Model
 {
@@ -20,7 +20,7 @@ class Conf extends Model
      * @var array
      */
     protected $fillable = [
-        'key', 'value'
+        'key', 'value',
     ];
 
     /**

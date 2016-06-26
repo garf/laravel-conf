@@ -2,7 +2,6 @@
 
 namespace Gaaarfild\LaravelConf;
 
-use Gaaarfild\LaravelConf\ConfManager;
 use Gaaarfild\LaravelConf\Contracts\ConfContract;
 use Illuminate\Support\ServiceProvider;
 
@@ -34,10 +33,10 @@ class LaravelConfServiceProvider extends ServiceProvider
         });
 
         $this->publishes([
-            __DIR__.'/../database/migrations/' => database_path('migrations')
+            __DIR__.'/../database/migrations/' => database_path('migrations'),
         ], 'migrations');
 
-        require_once (__DIR__.'/helper.php');
+        require_once __DIR__.'/helper.php';
     }
 
     /**

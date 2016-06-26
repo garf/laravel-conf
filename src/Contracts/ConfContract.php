@@ -3,8 +3,7 @@
 namespace Gaaarfild\LaravelConf\Contracts;
 
 /**
- * Interface ConfContract
- * @package Gaaarfild\LaravelConf
+ * Interface ConfContract.
  */
 interface ConfContract
 {
