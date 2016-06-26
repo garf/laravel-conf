@@ -123,7 +123,22 @@ Could be used 'dot' notation
 
 Also helper `conf()` can be used for more convenience.
 
-usage is similar to build in `config()` helper.
+Usage is similar to build in `config()` helper.
+
+``` PHP
+conf()->set('key.subkey', 'myValue');
+
+conf('key.subkey') // will return 'myValue'
+
+conf('non.existing.key', 'myDefaultValue') // will return 'myDefaultValue'
+
+$config = [
+    'key1' => 'value1',
+    'key2.subkey' => `value2`,
+];
+
+conf($config)
+```
 
 ## Contributions
 
