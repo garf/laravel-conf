@@ -3,7 +3,7 @@
 namespace Gaaarfild\LaravelConf\Drivers;
 
 /**
- * Class FileDriver
+ * Class FileDriver.
  */
 class FileDriver extends AbstractDriver
 {
@@ -19,7 +19,7 @@ class FileDriver extends AbstractDriver
      */
     public function __construct()
     {
-        $this->file = config("laravel-conf.drivers.file.path", storage_path('app/conf.json'));
+        $this->file = config('laravel-conf.drivers.file.path', storage_path('app/conf.json'));
 
         if (! file_exists($this->file)) {
             $this->config = [];
