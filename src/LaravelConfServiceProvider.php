@@ -32,12 +32,10 @@ class LaravelConfServiceProvider extends ServiceProvider
         $this->app->singleton(\Gaaarfild\LaravelConf\Contracts\Factory::class, function ($app) {
             return new ConfManager($app);
         });
-//
-//        $this->app->singleton('conf', function ($app) {
-//            return new Conf($app['url']);
-//        });
-//
-//        $this->app->alias('conf', ConfManager::class);
+
+        $this->publishes([
+            __DIR__.'/../database/migrations/' => database_path('migrations')
+        ], 'migrations');
     }
 
     /**

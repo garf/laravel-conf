@@ -4,14 +4,17 @@ namespace Gaaarfild\LaravelConf\Drivers;
 
 use Gaaarfild\LaravelConf\Contracts\ConfContract;
 
+/**
+ * Class AbstractDriver
+ */
 abstract class AbstractDriver implements ConfContract
 {
     /**
      * In-memory config store.
      *
-     * @var array|null
+     * @var array
      */
-    protected $config = null;
+    protected $config = [];
 
     /**
      * Get config value by key.

@@ -13,11 +13,13 @@ class CreateLaravelConfTable extends Migration
     public function up()
     {
         Schema::create('laravel_conf', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('key')->index();
+            $table->string('key');
             $table->string('value');
+
+            $table->primary('key');
         });
     }
+
     /**
      * Reverse the migrations.
      *
