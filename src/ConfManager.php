@@ -2,6 +2,7 @@
 
 namespace Gaaarfild\LaravelConf;
 
+use Gaaarfild\LaravelConf\Drivers\DatabaseDriver;
 use Gaaarfild\LaravelConf\Drivers\FileDriver;
 use Illuminate\Support\Manager;
 
@@ -34,7 +35,7 @@ class ConfManager extends Manager
     /**
      * Create an instance of the specified driver.
      *
-     * @return JsonDriver
+     * @return FIleDriver
      */
     protected function createFileDriver()
     {
@@ -42,6 +43,20 @@ class ConfManager extends Manager
 
         return $this->buildProvider(
             FileDriver::class, $config
+        );
+    }
+
+    /**
+     * Create an instance of the specified driver.
+     *
+     * @return FIleDriver
+     */
+    protected function createDatabaseDriver()
+    {
+        $config = $this->app['config']['laravel-conf.drivers.database'];
+
+        return $this->buildProvider(
+            DatabaseDriver::class, $config
         );
     }
 

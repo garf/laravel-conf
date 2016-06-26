@@ -5,9 +5,9 @@ namespace Gaaarfild\LaravelConf\Drivers;
 use Gaaarfild\LaravelConf\Models\Conf;
 
 /**
- * Class FileDriver
+ * Class DatabaseDriver
  */
-class FileDriver extends AbstractDriver
+class DatabaseDriver extends AbstractDriver
 {
     /**
      * @var Conf|null
