@@ -52,6 +52,20 @@ abstract class AbstractDriver implements ConfContract
     }
 
     /**
+     * @param array $config
+     *
+     * @return $this
+     */
+    public function put(array $config)
+    {
+        foreach ($config as $key => $value) {
+            $this->set($key, $value);
+        }
+
+        return $this;
+    }
+
+    /**
      * Return entire config.
      *
      * @return array

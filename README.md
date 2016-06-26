@@ -9,7 +9,7 @@ Custom editable configs for Laravel 5.
 
 This package helps you to store your additional configuration in your own files.
 
-This is helpfull when you need to edit your configuration by user from GUI. i.e. Website settings.
+This is helpful when you need to edit your configuration by user from GUI. i.e. Website settings.
 
 Config file will be stored into `storage/app/conf.json`.
 
@@ -47,6 +47,12 @@ If you want to use `Conf` facade, add to same file at the `aliases` section
 ]
 ```
 
+To be able to change file location, please execute the following command in the console:
+
+`php artisan vendor:publish --provider="Gaaarfild\LaravelConf\LaravelConfServiceProvider" --tag="config"`
+
+Then you can edit file `config/laravel-conf.php` to set any path to file you want to.
+
 ### Publishing config file
 
 To be able to change the path to config file and any other configurations, please execute the following command in the console:
@@ -63,10 +69,6 @@ Now you will be able to set configurations in `config/laravel-conf.php`.
 Conf::get('key.to.retrieve', 'default_value');
 ```
 
-You can optionally set the third parameter 'withFallback'.
-
-If no such value in JSON-file, it will try to get it from native config array.
-
 Else will return default value.
 
 Could be used 'dot' notation
@@ -78,6 +80,16 @@ Conf::set('key', 'value_to_save');
 ```
 
 Could be used 'dot' notation
+
+Also method `put` can be used to store multiple config values as array
+
+``` PHP
+$config = [
+    'key1' => 'value1',
+    'key2.subkey' => `value2`,
+];
+Conf::put($config);
+```
 
 ### Removing key from config
 
@@ -96,12 +108,8 @@ Conf::all();
 ### Check config key existence
 
 ``` PHP
-Conf::has('key.to.check', true);
+Conf::has('key.to.check');
 ```
-
-Second parameter `withFallback`.
-
-If true, it also checks for native laravel config key existence.
 
 Could be used 'dot' notation
 

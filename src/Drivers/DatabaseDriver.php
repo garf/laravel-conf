@@ -6,6 +6,7 @@ use Gaaarfild\LaravelConf\Models\Conf;
 
 /**
  * Class DatabaseDriver
+ * @deprecated('This driver not implemented yet')
  */
 class DatabaseDriver extends AbstractDriver
 {

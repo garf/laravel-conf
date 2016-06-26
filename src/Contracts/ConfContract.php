@@ -12,9 +12,16 @@ interface ConfContract
      * @param string $key
      * @param mixed  $value
      *
-     * @return mixed
+     * @return $this
      */
     public function set($key, $value);
+
+    /**
+     * @param array $config
+     *
+     * @return $this
+     */
+    public function put(array $config);
 
     /**
      * @param string $key
