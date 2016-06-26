@@ -119,6 +119,12 @@ Conf::has('key.to.check');
 
 Could be used 'dot' notation
 
+### Helper
+
+Also helper `conf()` can be used for more convenience.
+
+usage is similar to build in `config()` helper.
+
 ## Contributions
 
 Contributions are highly appreciated.

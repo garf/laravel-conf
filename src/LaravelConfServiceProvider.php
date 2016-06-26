@@ -29,13 +29,15 @@ class LaravelConfServiceProvider extends ServiceProvider
             __DIR__.'/../config/laravel-conf.php' => config_path('laravel-conf.php'),
         ], 'config');
 
-        $this->app->singleton(\Gaaarfild\LaravelConf\Contracts\Factory::class, function ($app) {
+        $this->app->singleton('conf', function ($app) {
             return new ConfManager($app);
         });
 
         $this->publishes([
             __DIR__.'/../database/migrations/' => database_path('migrations')
         ], 'migrations');
+
+        require_once (__DIR__.'/helper.php');
     }
 
     /**
