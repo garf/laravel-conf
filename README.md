@@ -47,6 +47,13 @@ If you want to use `Conf` facade, add to same file at the `aliases` section
 ]
 ```
 
+### Publishing config file
+
+To be able to change the path to config file and any other configurations, please execute the following command in the console:
+
+`php artisan vendor:publish --provider="Gaaarfild\LaravelConf\LaravelConfServiceProvider" --tag="config"`
+
+Now you will be able to set configurations in `config/laravel-conf.php`.
 
 ## Usage
 
