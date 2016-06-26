@@ -2,6 +2,8 @@
 
 namespace Gaaarfild\LaravelConf;
 
+use Gaaarfild\LaravelConf\ConfManager;
+use Gaaarfild\LaravelConf\Contracts\ConfContract;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelConfServiceProvider extends ServiceProvider
@@ -23,18 +25,28 @@ class LaravelConfServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerLaravelConf();
-        $this->app->alias('conf', \Gaaarfild\LaravelConf\Conf::class);
-    }
-
-    private function registerLaravelConf()
-    {
         $this->publishes([
             __DIR__.'/../config/laravel-conf.php' => config_path('laravel-conf.php'),
         ], 'config');
 
-        $this->app->singleton('conf', function ($app) {
-            return new Conf($app['url']);
+        $this->app->singleton(\Gaaarfild\LaravelConf\Contracts\Factory::class, function ($app) {
+            return new ConfManager($app);
         });
+//
+//        $this->app->singleton('conf', function ($app) {
+//            return new Conf($app['url']);
+//        });
+//
+//        $this->app->alias('conf', ConfManager::class);
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [ConfContract::class];
     }
 }

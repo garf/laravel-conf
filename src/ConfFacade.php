@@ -5,7 +5,7 @@ namespace Gaaarfild\LaravelConf;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Illuminate\Html\FormBuilder
+ * Class ConfFacade
  */
 class ConfFacade extends Facade
 {
@@ -16,6 +16,6 @@ class ConfFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'conf';
+        return \Gaaarfild\LaravelConf\Contracts\Factory::class;
     }
 }

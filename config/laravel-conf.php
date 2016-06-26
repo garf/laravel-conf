@@ -1,7 +1,7 @@
 <?php
 
 return [
-    // database and other drivers is going to be added in the future
+    // possible values are 'file', 'database'
     'driver' => 'file',
 
     'drivers' => [
