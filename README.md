@@ -7,18 +7,24 @@
 
 Custom editable configs for Laravel 5.
 
-This package helps you to store your additional configuration in your own files.
+This package helps you to store your additional configuration from your code in custom storage.
+
+Bu default it uses JSON-file.
 
 This is helpful when you need to edit your configuration by user from GUI. i.e. Website settings.
 
-Config file will be stored into `storage/app/conf.json`.
+## Caution!
+
+Be careful! This is version 2 of the package and fallback configuration was removed.
+
+If you still need to use it, please install version 1.*
 
 ## Install
 
 Add
 
 ``` JSON
-"gaaarfild/laravel-conf": "1.*"
+"gaaarfild/laravel-conf": "2.*"
 ```
 
 to your `composer.json` file into `require` section.
