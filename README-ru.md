@@ -5,6 +5,8 @@
 
 ![Laravel Conf](conf.png)
 
+[English Documentation / Английская документация](https://github.com/gaaarfild/laravel-conf/blob/master/README.md)
+
 Отдельная редактируемая конфигурация для Laravel 5.
 
 Данный пакет позволяет хранить дополнительную редактируемую конфигурацию в отдельном хранилище.
