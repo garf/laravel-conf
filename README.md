@@ -9,7 +9,7 @@ Custom editable configs for Laravel 5.
 
 This package helps you to store your additional configuration from your code in custom storage.
 
-Bu default it uses JSON-file.
+By default it uses JSON-file.
 
 This is helpful when you need to edit your configuration by user from GUI. i.e. Website settings.
 
@@ -17,7 +17,7 @@ This is helpful when you need to edit your configuration by user from GUI. i.e. 
 
 Be careful! This is version 2 of the package and fallback configuration was removed.
 
-If you still need to use it, please install version 1.*
+If you still need to use it, please install [version 1.*](https://github.com/gaaarfild/laravel-conf/tree/v1.2.2)
 
 ## Install
 
