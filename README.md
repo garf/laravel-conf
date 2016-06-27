@@ -5,6 +5,8 @@
 
 ![Laravel Conf](conf.png)
 
+[Russian Documentation / Русская документация](https://github.com/gaaarfild/laravel-conf/blob/master/README.md)
+
 Custom editable configs for Laravel 5.
 
 This package helps you to store your additional configuration from your code in custom storage.
@@ -53,19 +55,13 @@ If you want to use `Conf` facade, add to same file at the `aliases` section
 ]
 ```
 
+### Publishing config file
+
 To be able to change file location, please execute the following command in the console:
 
 `php artisan vendor:publish --provider="Gaaarfild\LaravelConf\LaravelConfServiceProvider" --tag="config"`
 
 Then you can edit file `config/laravel-conf.php` to set any path to file you want to.
-
-### Publishing config file
-
-To be able to change the path to config file and any other configurations, please execute the following command in the console:
-
-`php artisan vendor:publish --provider="Gaaarfild\LaravelConf\LaravelConfServiceProvider" --tag="config"`
-
-Now you will be able to set configurations in `config/laravel-conf.php`.
 
 ## Usage
 
@@ -109,6 +105,12 @@ Could be used 'dot' notation
 
 ``` PHP
 Conf::all();
+```
+
+### Get entire config in JSON
+
+``` PHP
+Conf::toJson();
 ```
 
 ### Check config key existence
