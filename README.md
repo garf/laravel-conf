@@ -5,7 +5,7 @@
 
 ![Laravel Conf](conf.png)
 
-[Russian Documentation / Русская документация](https://github.com/gaaarfild/laravel-conf/blob/master/README.md)
+[Russian Documentation / Русская документация](https://github.com/gaaarfild/laravel-conf/blob/master/README-ru.md)
 
 Custom editable configs for Laravel 5.
 
