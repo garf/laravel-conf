@@ -23,13 +23,19 @@
 
 ## Установка
 
-Добавьте в файл `composer.json` в секцию `require` следующую строчку
+Для установки версии 2.*, выполните в командной строке:
+
+``` BASH
+$ composer require gaaarfild/laravel-conf
+```
+
+Или в секцию `require` файла `composer.json` добавьте строчку:
 
 ``` JSON
 "gaaarfild/laravel-conf": "2.*"
 ```
 
-Далее, наберите в консоли
+После чего, наберите в консоли
 
 ``` BASH
 $ composer update
