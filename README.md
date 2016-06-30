@@ -23,13 +23,13 @@ If you still need to use it, please install [version 1.*](https://github.com/gaa
 
 ## Install
 
-To install version 2 *, follow the command line:
+To install version 2 *, type the following command in your command line:
 
 ``` BASH
 $ composer require gaaarfild/laravel-conf
 ```
 
-Or
+Or add
 
 ``` JSON
 "gaaarfild/laravel-conf": "2.*"
