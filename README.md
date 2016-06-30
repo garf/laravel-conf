@@ -142,6 +142,19 @@ $config = [
 conf($config)
 ```
 
+## Custom storage drivers
+
+This package uses the Laravel Manager class under the hood, so it's easy to add your own custom store driver if you want to store in some other way. All you need to do is extend the abstract `Gaaarfild\LaravelConf\Drivers\AbstractDriver` class, implement the abstract methods and call Conf::extend.
+
+``` php
+class MyStorageDriver extends Gaaarfild\LaravelConf\Drivers\AbstractDriver {
+    // ...
+}
+Conf::extend('mystorage', function($app) {
+    return $app->make('MyStorageDriver');
+});
+```
+
 ## Contributions
 
 Contributions are highly appreciated.
