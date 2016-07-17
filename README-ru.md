@@ -30,13 +30,13 @@
 Для установки версии 2.*, выполните в командной строке:
 
 ``` BASH
-$ composer require garf/laravel-conf
+$ composer require "garf/laravel-conf:3.*"
 ```
 
 Или в секцию `require` файла `composer.json` добавьте строчку:
 
 ``` JSON
-"garf/laravel-conf": "2.*"
+"garf/laravel-conf": "3.*"
 ```
 
 После чего, наберите в консоли

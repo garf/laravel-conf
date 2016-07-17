@@ -27,16 +27,16 @@ If you still need to use it, please install [version 1.*](https://github.com/gar
 
 ## Install
 
-To install version 2 *, type the following command in your command line:
+To install version 2, type the following command in your command line:
 
 ``` BASH
-$ composer require garf/laravel-conf
+$ composer require "garf/laravel-conf:3.*"
 ```
 
 Or add
 
 ``` JSON
-"garf/laravel-conf": "2.*"
+"garf/laravel-conf": "3.*"
 ```
 
 to your `composer.json` file into `require` section.
