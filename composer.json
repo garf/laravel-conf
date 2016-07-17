@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gaaarfild\\LaravelConf\\": "src/"
+            "Garf\\LaravelConf\\": "src/"
         }
     }
 }
