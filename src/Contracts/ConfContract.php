@@ -1,6 +1,6 @@
 <?php
 
-namespace Gaaarfild\LaravelConf\Contracts;
+namespace Garf\LaravelConf\Contracts;
 
 /**
  * Interface ConfContract.

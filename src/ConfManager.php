@@ -1,9 +1,9 @@
 <?php
 
-namespace Gaaarfild\LaravelConf;
+namespace Garf\LaravelConf;
 
-use Gaaarfild\LaravelConf\Drivers\DatabaseDriver;
-use Gaaarfild\LaravelConf\Drivers\FileDriver;
+use Garf\LaravelConf\Drivers\DatabaseDriver;
+use Garf\LaravelConf\Drivers\FileDriver;
 use Illuminate\Support\Manager;
 
 /**
@@ -80,6 +80,6 @@ class ConfManager extends Manager
     public function getDefaultDriver()
     {
         return $this->app['config']['laravel-conf.driver'];
-//        return \Gaaarfild\LaravelConf\Drivers\JsonDriver::class;
+//        return \Garf\LaravelConf\Drivers\JsonDriver::class;
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gaaarfild\LaravelConf\Drivers;
+namespace Garf\LaravelConf\Drivers;
 
-use Gaaarfild\LaravelConf\Contracts\ConfContract;
+use Garf\LaravelConf\Contracts\ConfContract;
 
 /**
  * Class AbstractDriver.

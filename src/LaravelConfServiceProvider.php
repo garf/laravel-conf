@@ -1,8 +1,8 @@
 <?php
 
-namespace Gaaarfild\LaravelConf;
+namespace Garf\LaravelConf;
 
-use Gaaarfild\LaravelConf\Contracts\ConfContract;
+use Garf\LaravelConf\Contracts\ConfContract;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelConfServiceProvider extends ServiceProvider

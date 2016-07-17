@@ -1,8 +1,8 @@
 <?php
 
-namespace Gaaarfild\LaravelConf\Drivers;
+namespace Garf\LaravelConf\Drivers;
 
-use Gaaarfild\LaravelConf\Models\Conf;
+use Garf\LaravelConf\Models\Conf;
 
 /**
  * Class DatabaseDriver.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gaaarfild\LaravelConf;
+namespace Garf\LaravelConf;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -16,6 +16,6 @@ class ConfFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return \Gaaarfild\LaravelConf\Contracts\Factory::class;
+        return \Garf\LaravelConf\Contracts\Factory::class;
     }
 }

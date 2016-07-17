@@ -147,10 +147,10 @@ conf($config)
 
 ## Собственные драйвера хранилищ
 
-Этот пакет использует класс Laravel Manager. Это позволяет легко расширять пакет вашими собственными драйверами хранения конфигураций. Все что вам надо сделать - это расширить абстрактный класс `Gaaarfild\LaravelConf\Drivers\AbstractDriver`, реализовать требуемые интерфейсом методы, и вызвать Conf::extend.
+Этот пакет использует класс Laravel Manager. Это позволяет легко расширять пакет вашими собственными драйверами хранения конфигураций. Все что вам надо сделать - это расширить абстрактный класс `Garf\LaravelConf\Drivers\AbstractDriver`, реализовать требуемые интерфейсом методы, и вызвать Conf::extend.
 
 ``` php
-class MyStorageDriver extends Gaaarfild\LaravelConf\Drivers\AbstractDriver {
+class MyStorageDriver extends Garf\LaravelConf\Drivers\AbstractDriver {
     // ...
 }
 Conf::extend('mystorage', function($app) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gaaarfild\LaravelConf\Models;
+namespace Garf\LaravelConf\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

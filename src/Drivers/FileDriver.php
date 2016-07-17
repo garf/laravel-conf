@@ -1,6 +1,6 @@
 <?php
 
-namespace Gaaarfild\LaravelConf\Drivers;
+namespace Garf\LaravelConf\Drivers;
 
 /**
  * Class FileDriver.
