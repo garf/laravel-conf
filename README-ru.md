@@ -5,7 +5,11 @@
 
 ![Laravel Conf](conf.png)
 
-[English Documentation / Английская документация](https://github.com/gaaarfild/laravel-conf/blob/master/README.md)
+[English Documentation / Английская документация](https://github.com/garf/laravel-conf/blob/master/README.md)
+
+## Внимание
+
+Адрес репозитория изменился с `gaaarfild` на `garf`. Не забудьте исправить ваш файл `composer.json`.
 
 Отдельная редактируемая конфигурация для Laravel 5.
 
@@ -19,20 +23,20 @@
 
 Будьте осторожны! Это вторая версия пакета. функция `fallback` была удалена.
 
-Если она вам все еще нужна, установите [версию 1.*](https://github.com/gaaarfild/laravel-conf/tree/v1.2.2)
+Если она вам все еще нужна, установите [версию 1.*](https://github.com/garf/laravel-conf/tree/v1.2.2)
 
 ## Установка
 
 Для установки версии 2.*, выполните в командной строке:
 
 ``` BASH
-$ composer require gaaarfild/laravel-conf
+$ composer require garf/laravel-conf
 ```
 
 Или в секцию `require` файла `composer.json` добавьте строчку:
 
 ``` JSON
-"gaaarfild/laravel-conf": "2.*"
+"garf/laravel-conf": "2.*"
 ```
 
 После чего, наберите в консоли
@@ -44,20 +48,20 @@ $ composer update
 После окончания обновления, добавьте в раздел `providers` файла `config/app.conf` строку:
 
 ``` php
-  Gaaarfild\LaravelConf\LaravelConfServiceProvider::class,
+  Garf\LaravelConf\LaravelConfServiceProvider::class,
 ```
 
 Если вы хотите использовать фасад `Conf`, добавьте в раздел `aliases` того же файла строку:
 
 ``` php
-  'Conf' => Gaaarfild\LaravelConf\ConfFacade::class,
+  'Conf' => Garf\LaravelConf\ConfFacade::class,
 ```
 
 ### Публикация файлов конфигурации
 
 Чтобы иметь возможность изменить расположение файла, используйте консольную команду:
 
-`php artisan vendor:publish --provider="Gaaarfild\LaravelConf\LaravelConfServiceProvider" --tag="config"`
+`php artisan vendor:publish --provider="Garf\LaravelConf\LaravelConfServiceProvider" --tag="config"`
 
 Теперь вы сможете отредактировать файл `config/laravel-conf.php` чтобы задать необходимый путь хранения файла настроек.
 
@@ -163,5 +167,5 @@ Conf::extend('mystorage', function($app) {
 
 ## Лицензия
 
-Лицензия MIT. Ознакомиться можно [здесь](https://github.com/gaaarfild/laravel-conf/blob/master/LICENSE).
+Лицензия MIT. Ознакомиться можно [здесь](https://github.com/garf/laravel-conf/blob/master/LICENSE).
 
