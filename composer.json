@@ -1,7 +1,7 @@
 {
-    "name": "gaaarfild/laravel-conf",
-    "description": "Store additional configs in JSON (write, read)",
-    "keywords": ["laravel", "config"],
+    "name": "garf/laravel-conf",
+    "description": "Store additional configs in JSON or Database (write, read)",
+    "keywords": ["laravel", "config", "json"],
     "license": "MIT",
     "authors": [
         {
