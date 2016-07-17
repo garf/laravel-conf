@@ -5,7 +5,7 @@
 
 ![Laravel Conf](conf.png)
 
-[Russian Documentation / Русская документация](https://github.com/gaaarfild/laravel-conf/blob/master/README-ru.md)
+[Russian Documentation / Русская документация](https://github.com/garf/laravel-conf/blob/master/README-ru.md)
 
 Custom editable configs for Laravel 5.
 
@@ -19,20 +19,20 @@ This is helpful when you need to edit your configuration by user from GUI. i.e. 
 
 Be careful! This is version 2 of the package and fallback configuration was removed.
 
-If you still need to use it, please install [version 1.*](https://github.com/gaaarfild/laravel-conf/tree/v1.2.2)
+If you still need to use it, please install [version 1.*](https://github.com/garf/laravel-conf/tree/v1.2.2)
 
 ## Install
 
 To install version 2 *, type the following command in your command line:
 
 ``` BASH
-$ composer require gaaarfild/laravel-conf
+$ composer require garf/laravel-conf
 ```
 
 Or add
 
 ``` JSON
-"gaaarfild/laravel-conf": "2.*"
+"garf/laravel-conf": "2.*"
 ```
 
 to your `composer.json` file into `require` section.
@@ -48,7 +48,7 @@ When update completed, add to your `config/app.conf` file to `providers` section
 ``` PHP
 'providers' => [
     // ...
-    Gaaarfild\LaravelConf\LaravelConfServiceProvider::class,
+    Garf\LaravelConf\LaravelConfServiceProvider::class,
 ]
 ```
 
@@ -57,7 +57,7 @@ If you want to use `Conf` facade, add to same file at the `aliases` section
 ``` PHP
 'aliases' => [
     // ...
-  'Conf' => Gaaarfild\LaravelConf\ConfFacade::class,
+  'Conf' => Garf\LaravelConf\ConfFacade::class,
 ]
 ```
 
@@ -65,7 +65,7 @@ If you want to use `Conf` facade, add to same file at the `aliases` section
 
 To be able to change file location, please execute the following command in the console:
 
-`php artisan vendor:publish --provider="Gaaarfild\LaravelConf\LaravelConfServiceProvider" --tag="config"`
+`php artisan vendor:publish --provider="Garf\LaravelConf\LaravelConfServiceProvider" --tag="config"`
 
 Then you can edit file `config/laravel-conf.php` to set any path to file you want to.
 
@@ -170,5 +170,5 @@ Send your pull requests to `master` branch.
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/gaaarfild/laravel-conf/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/garf/laravel-conf/blob/master/LICENSE) for more information.
 
