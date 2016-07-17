@@ -9,6 +9,10 @@
 
 Custom editable configs for Laravel 5.
 
+## Caution 
+
+Repository address changed from `gaaarfild` to `garf`. Dont forget to fix your `composer.json`.
+
 This package helps you to store your additional configuration from your code in custom storage.
 
 By default it uses JSON-file.
