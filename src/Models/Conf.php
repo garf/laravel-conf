@@ -13,6 +13,11 @@ class Conf extends Model
      * @var string
      */
     protected $table = 'laravel_conf';
+    
+    /**
+     * {@inheritdoc}
+     */
+    protected $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
