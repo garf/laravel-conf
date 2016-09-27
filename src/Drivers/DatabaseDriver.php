@@ -6,7 +6,7 @@ use Garf\LaravelConf\Models\Conf;
 
 /**
  * Class DatabaseDriver.
- * @deprecated('This driver not implemented yet')
+ * @deprecated('This driver is in testing. Use with caution!')
  */
 class DatabaseDriver extends AbstractDriver
 {
